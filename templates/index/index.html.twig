@@ -1,0 +1,52 @@
+{% extends "base.html.twig" %}
+{% block body %}
+{% include "caroussel.html.twig" %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ asset('img/im1.png')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Devis Réseaux</h5>
+                    <p class="card-text">
+                        Une équipe d'espert et dynamique en réseaux pour vous satisfaire
+                    </p>
+                    <a href="{{ path('r_demande') }}" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ asset('img/im2.png')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Demande Software</h5>
+                    <p class="card-text">
+                        Faite resortir vos besoins et nous Trouverons un logiciel a vos besoins
+                    </p>
+                    <a href="{{ path('s_demande') }}" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ asset('img/im3.png')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Demande Hardware</h5>
+                    <p class="card-text">
+                        Une equipe de reparation satisfaisante juste pour vousdite nous ce qui ne marche pas et nous verons la suite
+                    </p>
+                    <a href="{{ path('h_demande') }}" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock  %}
+{% block js %}
+<script>
+    $('.carousel').carousel({
+        interval: 3000
+    })
+</script>
+{% endblock %}
